@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+/*document.addEventListener("DOMContentLoaded", function () {
   const seatData = [
     { id: "seat1-1", name: "seatOne" },
     { id: "seat1-2", name: "seatTwo" },
@@ -34,4 +34,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementById(("selectedTickets".innerHTML = ""));
   });
-});
+}); */
