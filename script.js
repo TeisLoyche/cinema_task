@@ -1,4 +1,6 @@
-/*document.addEventListener("DOMContentLoaded", function () {
+/*Försöker bara testa med 2 säten till att börja med. Får det dock inte att fungera*/
+
+document.addEventListener("DOMContentLoaded", function () {
   const seatData = [
     { id: "seat1-1", name: "seatOne" },
     { id: "seat1-2", name: "seatTwo" },
@@ -34,4 +36,4 @@
 
     document.getElementById(("selectedTickets".innerHTML = ""));
   });
-}); */
+});
