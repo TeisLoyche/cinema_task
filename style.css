@@ -1,0 +1,835 @@
+/*Imported Google-fonts*/
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+/*MAIN CONTAINER*/
+
+.container {
+  display: grid;
+  width: 100%;
+  gap: 20px;
+  grid-template-rows: 80px 333px 600px;
+  grid-template-columns: 1200px 350px;
+  grid-template-areas:
+    "head1 head1"
+    "prom side"
+    "movies side";
+}
+
+/*HEADER*/
+
+.header {
+  grid-area: head1;
+  background-color: rgba(179, 6, 35, 1);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1200px 133px 133px;
+  grid-template-areas: "logo playing coming about";
+}
+
+.logo {
+  grid-area: logo;
+  height: 30px;
+  width: 130px;
+  padding-top: 22px;
+  padding-left: 20px;
+}
+
+.now_playing {
+  grid-area: playing;
+  font-family: "Oswald", sans-serif;
+  color: white;
+  align-self: center;
+  padding-left: 10px;
+}
+
+.coming_soon {
+  grid-area: coming;
+  font-family: "Oswald", sans-serif;
+  color: white;
+  align-self: center;
+  padding-left: 10px;
+}
+
+.about {
+  grid-area: about;
+  font-family: "Oswald", sans-serif;
+  color: white;
+  align-self: center;
+  padding-left: 10px;
+}
+
+/*PROMO MOVIE*/
+
+.promo_box {
+  grid-area: prom;
+}
+
+.promo_movie {
+  grid-area: prom;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  filter: brightness(60%);
+  border-radius: 10px;
+  object-position: 50% 40%;
+}
+
+.promo_text_container {
+  grid-area: prom;
+  position: relative;
+  bottom: 250px;
+  left: 50px;
+}
+
+/*TICKETS button*/
+
+.ticket_button {
+  background-color: rgba(179, 6, 35, 1);
+  border-radius: 10px;
+  font-family: "Oswald", sans-serif;
+  color: white;
+  font-size: 16px;
+  height: 40px;
+  width: 150px;
+  border: none;
+  font-weight: 600;
+}
+
+.button_container {
+  grid-area: prom;
+  position: relative;
+  bottom: 230px;
+  left: 50px;
+}
+
+/*MOVIE-GRID + MOVIES*/
+
+.moviesContainer {
+  grid-area: movies;
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+  padding: 10px;
+  grid-template-columns: 380px 380px 380px;
+  grid-template-rows: 50px 250px 250px;
+  grid-template-areas:
+    "play play arrow"
+    "mov1 mov2 mov3"
+    "mov4 mov5 mov6";
+}
+
+/*NOW PLAYING text + arrows above movies*/
+
+.nowPlaying {
+  grid-area: play;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  padding-top: 25px;
+  padding-left: 8px;
+}
+
+.arrows {
+  grid-area: arrow;
+  justify-self: right;
+  padding-top: 35px;
+  padding-right: 10px;
+}
+
+/*Movie 1*/
+
+.movieOne_container {
+  grid-area: mov1;
+  background-image: url(images/whispersInTheWindLow.png);
+  background-size: 200%;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.movie_text1 {
+  grid-area: mov1;
+  position: relative;
+  color: white;
+  font-family: "Inter", sans-serif;
+  align-self: first baseline;
+  top: 180px;
+  left: 20px;
+  display: inline-flex;
+}
+
+.movie_genre_1 {
+  grid-area: mov1;
+  position: relative;
+  top: 10px;
+  left: 60px;
+}
+
+/*Movie 2*/
+
+.movieTwo_container {
+  grid-area: mov2;
+  background-image: url(images/galacticGuardiansLow.png);
+  border-radius: 10px;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+}
+
+.movie_text2 {
+  grid-area: mov2;
+  position: relative;
+  color: white;
+  font-family: "Inter", sans-serif;
+  align-self: first baseline;
+  top: 180px;
+  left: 20px;
+  display: inline-flex;
+}
+
+.movie_genre_2 {
+  grid-area: mov2;
+  position: relative;
+  top: 10px;
+  left: 30px;
+}
+
+/*Movie 3*/
+
+.movieThree_container {
+  grid-area: mov3;
+  background-image: url(images/hauntingOfHollowCreekLow.png);
+  background-size: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+}
+
+.movie_text3 {
+  grid-area: mov3;
+  position: relative;
+  color: white;
+  font-family: "Inter", sans-serif;
+  align-self: first baseline;
+  top: 180px;
+  left: 20px;
+  display: inline-flex;
+}
+
+.movie_genre_3 {
+  grid-area: mov3;
+  position: relative;
+  top: 10px;
+  left: 100px;
+}
+
+/*Movie 4*/
+
+.movieFour_container {
+  grid-area: mov4;
+  background-image: url(images/retrogradeLow.png);
+  background-size: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+}
+
+.movie_text4 {
+  grid-area: mov4;
+  position: relative;
+  color: white;
+  font-family: "Inter", sans-serif;
+  align-self: first baseline;
+  top: 180px;
+  left: 20px;
+  display: inline-flex;
+}
+
+.movie_genre_4 {
+  grid-area: mov4;
+  position: relative;
+  top: 10px;
+  left: 100px;
+}
+
+/*Movie 5*/
+
+.movieFive_container {
+  grid-area: mov5;
+  background-image: url(images/doubleAgentDadLow.png);
+  background-size: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+}
+
+.movie_text5 {
+  grid-area: mov5;
+  position: relative;
+  color: white;
+  font-family: "Inter", sans-serif;
+  align-self: first baseline;
+  top: 180px;
+  left: 20px;
+  display: inline-flex;
+}
+
+.movie_genre_5 {
+  grid-area: mov5;
+  position: relative;
+  top: 10px;
+  left: 100px;
+}
+
+/*Movie 6*/
+
+.movieSix_container {
+  grid-area: mov6;
+  background-image: url(images/loveLiesAndLemonCakeLow.png);
+  background-size: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+}
+
+.movie_text6 {
+  grid-area: mov6;
+  position: relative;
+  color: white;
+  font-family: "Inter", sans-serif;
+  align-self: first baseline;
+  top: 180px;
+  left: 20px;
+  display: inline-flex;
+}
+
+.movie_genre_6 {
+  grid-area: mov6;
+  position: relative;
+  top: 10px;
+  left: 100px;
+}
+
+/*SIDEBAR*/
+
+.sidebar {
+  grid-area: side;
+  display: grid;
+  background-color: rgba(179, 6, 35, 1);
+  border-radius: 10px;
+  gap: 20px;
+  justify-content: center;
+  grid-template-columns: 300px;
+  grid-template-rows: 35px 100px 100px 100px 35px 100px 100px 100px;
+  grid-template-areas:
+    "popular"
+    "popmov1"
+    "popmov2"
+    "popmov3"
+    "coming"
+    "comov1"
+    "comov2"
+    "comov3";
+}
+
+/*POPULAR + COMING movie containers*/
+
+.popmovie {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 100px 200px;
+  grid-template-rows: 100px;
+  grid-area: "image rating";
+  border-radius: 10px;
+}
+
+.comovie {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 100px 200px;
+  grid-template-rows: 100px;
+  grid-area: "image rating";
+  border-radius: 10px;
+}
+
+/*Container for text and star-rating for all sidebar-movies*/
+
+.textContentAndRating {
+  grid-area: rating;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  font-family: "Inter", sans-serif;
+}
+
+/*POPULAR MOVIES header text*/
+
+.popular_movies_header {
+  grid-area: popular;
+  font-family: "Oswald", sans-serif;
+  color: white;
+  padding-top: 20px;
+  font-weight: 600;
+}
+
+/*POPULAR movie 1, sidebar*/
+
+.popmovie_1 {
+  grid-area: popmov1;
+}
+
+.popmovie_1_image {
+  grid-area: image;
+  padding: 10px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  object-fit: cover;
+  height: 80%;
+  width: 80%;
+  border-radius: 20px;
+}
+
+/*POPULAR movie 2, sidebar*/
+
+.popmovie_2 {
+  grid-area: popmov2;
+}
+
+.popmovie_2_image {
+  grid-area: image;
+  padding: 10px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  object-fit: cover;
+  height: 80%;
+  width: 80%;
+  border-radius: 20px;
+}
+
+/*POPULAR movie 3, sidebar*/
+
+.popmovie_3 {
+  grid-area: popmov3;
+}
+
+.popmovie_3_image {
+  grid-area: image;
+  padding: 10px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  object-fit: cover;
+  height: 80%;
+  width: 80%;
+  border-radius: 20px;
+}
+
+/*COMING SOON header text*/
+
+.coming_movies_header {
+  grid-area: coming;
+  font-family: "Oswald", sans-serif;
+  color: white;
+  padding-top: 20px;
+  font-weight: 600;
+}
+
+/*COMING movie 1, sidebar*/
+
+.comovie_1 {
+  grid-area: comov1;
+}
+
+.comovie_1_image {
+  grid-area: image;
+  padding: 10px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  object-fit: cover;
+  height: 80%;
+  width: 80%;
+  border-radius: 20px;
+}
+
+/*COMING movie 2, sidebar*/
+
+.comovie_2 {
+  grid-area: comov2;
+}
+
+.comovie_2_image {
+  grid-area: image;
+  padding: 10px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  object-fit: cover;
+  height: 80%;
+  width: 80%;
+  border-radius: 20px;
+}
+
+/*COMING movie 3, sidebar*/
+
+.comovie_3 {
+  grid-area: comov3;
+}
+
+.comovie_3_image {
+  grid-area: image;
+  padding: 10px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  object-fit: cover;
+  height: 80%;
+  width: 80%;
+  border-radius: 20px;
+}
+
+/*Text styling*/
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  color: white;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
+  padding-top: 10px;
+}
+
+p {
+  font-weight: 300;
+  color: rgba(153, 153, 153, 1);
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+}
+
+.p2 {
+  font-weight: 300;
+  color: white;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+}
+
+/*STAR-rating*/
+
+.stars {
+  grid-area: rating;
+  grid-column-start: 2;
+  grid-row-start: 1;
+  align-self: last baseline;
+  display: flexbox;
+  padding-bottom: 10px;
+}
+
+.checked {
+  color: rgba(255, 214, 0, 1);
+}
+
+.unchecked {
+  color: rgba(196, 196, 196, 1);
+}
+
+.phone_header {
+  display: none;
+}
+
+.phone_sidebar {
+  display: none;
+}
+
+/*PHONE STYLING*/
+
+@media screen and (max-width: 391px) {
+  .container,
+  body {
+    display: grid;
+    padding: 0;
+    margin: 0;
+  }
+
+  /*MAIN CONTAINER*/
+
+  .container {
+    display: grid;
+    width: 390px;
+    gap: 20px;
+    grid-template-rows: 50px 230px 330px 234px;
+    grid-template-columns: 390px;
+    grid-template-areas:
+      "head"
+      "prom"
+      "movies"
+      "buttons";
+  }
+
+  .moviesContainer {
+    display: none;
+  }
+
+  /*PHONE HEADER*/
+
+  .header {
+    display: none;
+  }
+
+  .phone_header {
+    grid-area: head;
+    background-color: rgba(179, 6, 35, 1);
+    display: grid;
+    border-radius: 0;
+    grid-template-columns: 60px 60px 60px;
+    grid-template-areas: "menu home logo";
+  }
+
+  .Hamburger {
+    grid-area: menu;
+    font-family: "Oswald", sans-serif;
+    color: white;
+    align-self: center;
+    padding-left: 10px;
+  }
+
+  .Home {
+    grid-area: home;
+    font-family: "Oswald", sans-serif;
+    color: white;
+    align-self: center;
+    padding-left: 10px;
+  }
+
+  .logo_container {
+    grid-area: logo;
+    align-self: center;
+  }
+
+  .logo {
+    height: 20px;
+    width: 90px;
+    padding-left: 160px;
+    margin-top: -8px;
+  }
+
+  /*PROMO BOX*/
+
+  .promo_box {
+    grid-area: prom;
+    padding: 20px;
+  }
+
+  .promo_movie {
+    grid-area: prom;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    filter: brightness(60%);
+    border-radius: 10px;
+    object-position: 50% 40%;
+  }
+
+  .promo_text_container {
+    grid-area: prom;
+    position: relative;
+    bottom: 80px;
+    left: 20px;
+  }
+
+  /*PROMO tickets-button*/
+
+  .ticket_button {
+    background-color: rgba(179, 6, 35, 1);
+    border-radius: 10px;
+    font-family: "Oswald", sans-serif;
+    color: white;
+    font-size: 10px;
+    height: 31px;
+    width: 112px;
+    border: none;
+    font-weight: 600;
+  }
+
+  .button_container {
+    grid-area: prom;
+    position: relative;
+    bottom: 120px;
+    left: 220px;
+  }
+
+  /*MOVIES*/
+
+  .sidebar {
+    display: none;
+  }
+
+  .phone_sidebar {
+    grid-area: movies;
+    display: grid;
+    background-color: rgba(179, 6, 35, 1);
+    gap: 20px;
+    grid-template-columns: 360px;
+    grid-template-rows: 35px 100px 100px;
+    grid-template-areas:
+      "nowPlaying"
+      "popmov1"
+      "popmov2";
+  }
+
+  /*PHONE movie containers*/
+
+  .popular_movies_header {
+    grid-area: nowPlaying;
+    margin-left: 20px;
+  }
+
+  .popmovie {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 100px 200px;
+    grid-template-rows: 100px;
+    grid-area: "image rating";
+    margin-left: 20px;
+  }
+
+  /*Movie button*/
+
+  .movie_button_container {
+    grid-area: rating;
+    position: relative;
+    margin-left: 120px;
+  }
+
+  .movie_ticket_button {
+    background-color: rgba(179, 6, 35, 1);
+    border-radius: 10px;
+    font-family: "Oswald", sans-serif;
+    color: white;
+    font-size: 10px;
+    height: 31px;
+    width: 112px;
+    border: none;
+    font-weight: 600;
+  }
+
+  /*Movie 1*/
+
+  .popmovie_1 {
+    grid-area: popmov1;
+  }
+
+  .popmovie_1_image {
+    grid-area: image;
+    padding: 10px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    object-fit: cover;
+    height: 80%;
+    width: 80%;
+    border-radius: 20px;
+  }
+
+  /*Movie 2*/
+
+  .popmovie_2 {
+    grid-area: popmov2;
+  }
+
+  .popmovie_2_image {
+    grid-area: image;
+    padding: 10px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    object-fit: cover;
+    height: 80%;
+    width: 80%;
+    border-radius: 20px;
+  }
+
+  /*POPULAR and COMING movie-buttons*/
+
+  .phoneButtonsContainer {
+    grid-area: buttons;
+    align-items: center;
+    grid-column-start: 1;
+    grid-row-start: 5;
+    margin-top: 60px;
+    margin-left: 30px;
+  }
+
+  .PopButton {
+    background-color: rgba(179, 6, 35, 1);
+    border-radius: 10px;
+    font-family: "Oswald", sans-serif;
+    color: white;
+    font-size: 16px;
+    height: 50px;
+    width: 320px;
+    border: none;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+
+  .ComingButton {
+    background-color: rgba(179, 6, 35, 1);
+    border-radius: 10px;
+    font-family: "Oswald", sans-serif;
+    color: white;
+    font-size: 16px;
+    height: 50px;
+    width: 112px;
+    border: none;
+    font-weight: 600;
+    width: 320px;
+  }
+
+  /*Text styling*/
+
+  h1 {
+    font-size: 15px;
+    font-family: "Oswald", sans-serif;
+    color: white;
+  }
+
+  br {
+    display: none;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+    padding-top: 10px;
+  }
+
+  p {
+    font-weight: 300;
+    color: rgba(153, 153, 153, 1);
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .p2 {
+    font-weight: 300;
+    color: white;
+    font-size: 10px;
+    font-family: "Inter", sans-serif;
+  }
+}

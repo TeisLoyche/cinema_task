@@ -1,0 +1,266 @@
+/*Imported Google-fonts*/
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-left: 20px;
+}
+
+/*MAIN CONTAINER*/
+
+.container {
+  display: grid;
+  width: 100%;
+  grid-template-rows: 80px 300px 600px;
+  grid-template-columns: 800px 800px;
+  grid-template-areas:
+    "head1 head1"
+    "prom prom"
+    "seat seat";
+}
+
+/*HEADER*/
+
+.header {
+  grid-area: head1;
+  background-color: rgba(179, 6, 35, 1);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1200px 133px 133px;
+  grid-template-areas: "logo playing coming about";
+}
+
+.logo {
+  grid-area: logo;
+  height: 50px;
+  width: 130px;
+  padding-top: 22px;
+  padding-left: 20px;
+}
+
+.now_playing {
+  grid-area: playing;
+  font-family: "Oswald", sans-serif;
+  color: white;
+  align-self: center;
+  padding-left: 10px;
+}
+
+.coming_soon {
+  grid-area: coming;
+  font-family: "Oswald", sans-serif;
+  color: white;
+  align-self: center;
+  padding-left: 10px;
+}
+
+.about {
+  grid-area: about;
+  font-family: "Oswald", sans-serif;
+  color: white;
+  align-self: center;
+  padding-left: 10px;
+}
+
+/*MOVIE INFO BOX*/
+
+.movie_info {
+  grid-area: prom;
+  display: grid;
+  grid-template-columns: 500px 1000px;
+  grid-template-rows: 150px;
+  grid-template-areas:
+    "movImg info"
+    "movImg pins";
+}
+
+.promo_movie {
+  grid-area: movImg;
+  object-fit: cover;
+  height: 80%;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.text_content {
+  grid-area: info;
+  padding-left: 30px;
+  padding-top: 20px;
+}
+
+/*Text styles*/
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 32px;
+}
+
+h2 {
+  font-family: "Inter", sans-serif;
+  color: rgba(153, 153, 153, 1);
+  font-size: 16px;
+}
+
+p {
+  font-family: "Inter", sans-serif;
+  padding-top: 10px;
+}
+
+/*Clock and Pin icons*/
+
+.pins {
+  grid-area: pins;
+  display: flex;
+  text-align: center;
+  padding-left: 50px;
+  padding-top: 20px;
+}
+
+.pin_english {
+  font-weight: 800;
+}
+
+.clock_time {
+  font-weight: 800;
+}
+
+.clock {
+  padding-right: 80px;
+}
+
+/*SEATING GRID*/
+
+.seating {
+  grid-area: seat;
+  display: grid;
+  grid-template-columns: 800px 800px;
+  grid-template-rows: 100px 400px 50px 50px;
+  grid-template-areas:
+    "arch arch"
+    "seatLeft seatRight"
+    "seatInfo seatInfo"
+    "book book";
+  border-radius: 10px;
+
+  box-shadow: 1px 10px 21px 5px rgba(0, 0, 0, 0.09);
+  -webkit-box-shadow: 1px 10px 21px 5px rgba(0, 0, 0, 0.09);
+  -moz-box-shadow: 1px 10px 21px 5px rgba(0, 0, 0, 0.09);
+}
+
+.button_contaier {
+  grid-area: book;
+  text-align: center;
+}
+
+.bookButton {
+  background-color: rgba(179, 6, 35, 1);
+  border-radius: 10px;
+  font-family: "Oswald", sans-serif;
+  color: white;
+  font-size: 16px;
+  height: 40px;
+  width: 300px;
+  border: none;
+  font-weight: 600;
+}
+
+/*Movie canvas image*/
+
+.arch_img {
+  grid-area: arch;
+  margin-left: 320px;
+  margin-top: 40px;
+  width: 60%;
+}
+
+.available_reserved {
+  grid-area: seatInfo;
+  margin-left: 650px;
+  padding-top: 20px;
+}
+
+/*SEATS*/
+
+.seatingLeft {
+  grid-area: seatLeft;
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(40px, 1fr));
+  gap: 10px;
+  margin-right: 30px;
+}
+
+.seatingRight {
+  grid-area: seatRight;
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(40px, 1fr));
+  gap: 10px;
+  margin-left: 30px;
+}
+
+.row {
+  margin-bottom: 10px;
+}
+
+.seat {
+  display: none;
+}
+
+.seat-label-left {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+  cursor: pointer;
+  border-radius: 4px;
+  float: right;
+  margin-left: 10px;
+}
+
+.seat-label-right {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+  cursor: pointer;
+  border-radius: 4px;
+  float: left;
+  margin-right: 10px;
+}
+
+.seat-label-right.available:hover,
+.seat-label-left.available:hover,
+.seat:checked + .seat-label-right.available,
+.seat:checked + .seat-label-left.available {
+  background-color: #fc0;
+}
+
+.seat-label-left.reserved,
+.seat-label-right.reserved,
+.seat:disabled + .seat-label-left,
+.seat:disabled + .seat-label-right {
+  background-color: rgba(179, 6, 35, 1);
+  cursor: not-allowed;
+}
+
+button {
+  background-color: rgba(179, 6, 35, 1);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: rgba(179, 6, 35, 1);
+}

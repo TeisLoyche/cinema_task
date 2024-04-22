@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking</title>
+    <link rel="stylesheet" href="bookingstyle.css" />
+  </head>
+  <body>
+    <!--Main container-->
+    <div class="container">
+    
+      
+      <!--Header-->
+      <div class="item header">
+        <div class="now_playing">NOW PLAYING</div>
+        <div class="coming_soon">COMING SOON</div>
+        <div class="about">ABOUT</div>
+        <div class="item headerGrid">
+          <img class="logo" src="images/logo.png" />
+        </div>
+      </div>
+
+      <!--Movie info box-->
+      <div class="movie_info">
+        <img class="promo_movie" src="/images/promo_movie.webp" />
+        <div class="text_content">
+          <h1>THE CLOCKWORK MIRAGE</h2>
+          <h2>Science Fiction / Thriller</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, <br/>
+            laborum veniam sed optio non cum odit voluptas odio ipsam reiciendis <br/>
+            at aliquid quod omnis fugit autem necessitatibus est fuga doloribus?
+          </p>
+        </div>
+        <!--Clock and pin icons-->
+        <div class="pins">
+        <div class="clock">
+          <img class="clock_image" src="images/Clock.png" />
+          <div class="clock_length"><h2>Length</h2></div>
+          <div class="clock_time"><p>03:14:50</p></div>
+        </div>
+        <div class="pin">
+          <img class="pin_image" src="images/Pin.png" />
+          <div class="pin_language"><h2>Language</h2></div>
+          <div class="pin_english"><p>English</p></div>
+        </div>
+      </div>
+      </div>
+
+      <!--LEFT SEATING-->
+      <div class="seating">
+        <div id="selectedSeats">
+          <div id="seatSummary"></div>
+        </div>
+        <img class="arch_img" src="images/arch.png" />
+        <img class="available_reserved" src="images/selected_reserved_available.png" />
+
+        <div class="button_contaier">
+          <button type="submit">BOOK NOW!</button>
+        </div>
+        
+
+        <div class="seatingLeft">
+          <div class="row">
+            <!-- row 1 -->
+            <input type="checkbox" id="seat1-11" class="seat" />
+            <label for="seat1-11" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat1-10" class="seat" />
+            <label for="seat1-10" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat1-9" class="seat" />
+            <label for="seat1-9" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat1-8" class="seat" />
+            <label for="seat1-8" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat1-7" class="seat" />
+            <label for="seat1-7" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat1-6" class="seat" />
+            <label for="seat1-6" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-5" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat1-4" class="seat" />
+            <label for="seat1-4" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat1-3" class="seat" />
+            <label for="seat1-3" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat1-2" class="seat" />
+            <label for="seat1-2" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat1-1" class="seat" />
+            <label for="seat1-1" class="seat-label-left available"></label>
+          </div>
+
+          <!-- row 2 -->
+          <div class="row">
+            <input type="checkbox" id="seat2-12" class="seat" />
+            <label for="seat2-12" class="seat-label-left reserved"></label>
+
+            <input type="checkbox" id="seat2-11" class="seat" />
+            <label for="seat2-11" class="seat-label-left reserved"></label>
+
+            <input type="checkbox" id="seat2-10" class="seat" />
+            <label for="seat2-10" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat2-9" class="seat" />
+            <label for="seat2-9" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat2-8" class="seat" />
+            <label for="seat2-8" class="seat-label-left reserved"></label>
+
+            <input type="checkbox" id="seat2-7" class="seat" />
+            <label for="seat2-7" class="seat-label-left reserved"></label>
+
+            <input type="checkbox" id="seat2-6" class="seat" />
+            <label for="seat2-6" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat2-5" class="seat" />
+            <label for="seat2-5" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat2-4" class="seat" />
+            <label for="seat2-4" class="seat-label-left reserved"></label>
+
+            <input type="checkbox" id="seat2-3" class="seat" />
+            <label for="seat2-3" class="seat-label-left reserved"></label>
+
+            <input type="checkbox" id="seat2-2" class="seat" />
+            <label for="seat2-2" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat2-1" class="seat" />
+            <label for="seat2-1" class="seat-label-left available"></label>
+          </div>
+
+          <!-- row 3 -->
+          <div class="row">
+            <input type="checkbox" id="seat3-12" class="seat" />
+            <label for="seat3-12" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat3-11" class="seat" />
+            <label for="seat3-11" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat3-10" class="seat" />
+            <label for="seat3-10" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat3-9" class="seat" />
+            <label for="seat3-9" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat3-8" class="seat" />
+            <label for="seat3-8" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat3-7" class="seat" />
+            <label for="seat3-7" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat3-6" class="seat" />
+            <label for="seat3-6" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat3-5" class="seat" />
+            <label for="seat3-5" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat3-4" class="seat" />
+            <label for="seat3-4" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat3-3" class="seat" />
+            <label for="seat3-3" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat3-2" class="seat" />
+            <label for="seat3-2" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat3-1" class="seat" />
+            <label for="seat3-1" class="seat-label-left available"></label>
+          </div>
+
+          <!-- row 4 -->
+          <div class="row">
+            <input type="checkbox" id="seat4-12" class="seat" />
+            <label for="seat4-12" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat4-11" class="seat" />
+            <label for="seat4-11" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat4-10" class="seat" />
+            <label for="seat4-10" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat4-9" class="seat" />
+            <label for="seat4-9" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat4-8" class="seat" />
+            <label for="seat4-8" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat4-7" class="seat" />
+            <label for="seat4-7" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat4-6" class="seat" />
+            <label for="seat4-6" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat4-5" class="seat" />
+            <label for="seat4-5" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat4-4" class="seat" />
+            <label for="seat4-4" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat4-3" class="seat" />
+            <label for="seat4-3" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat4-2" class="seat" />
+            <label for="seat4-2" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat4-1" class="seat" />
+            <label for="seat4-1" class="seat-label-left available"></label>
+          </div>
+
+          <!-- row 5 -->
+          <div class="row">
+            <input type="checkbox" id="seat5-12" class="seat" />
+            <label for="seat5-12" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat5-11" class="seat" />
+            <label for="seat5-11" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat5-10" class="seat" />
+            <label for="seat5-10" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat5-9" class="seat" />
+            <label for="seat5-9" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat5-8" class="seat" />
+            <label for="seat5-8" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat5-7" class="seat" />
+            <label for="seat5-7" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat5-6" class="seat" />
+            <label for="seat5-6" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat5-5" class="seat" />
+            <label for="seat5-5" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat5-4" class="seat" />
+            <label for="seat5-4" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat5-3" class="seat" />
+            <label for="seat5-3" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat5-2" class="seat" />
+            <label for="seat5-2" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat5-1" class="seat" />
+            <label for="seat5-1" class="seat-label-left available"></label>
+          </div>
+
+          <!-- row 6 -->
+          <div class="row">
+            <input type="checkbox" id="seat6-12" class="seat" />
+            <label for="seat6-12" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat6-11" class="seat" />
+            <label for="seat6-11" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat6-10" class="seat" />
+            <label for="seat6-10" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat6-9" class="seat" />
+            <label for="seat6-9" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat6-8" class="seat" />
+            <label for="seat6-8" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat6-7" class="seat" />
+            <label for="seat6-7" class="seat-label-left reserved"></label>
+
+            <input type="checkbox" id="seat6-6" class="seat" />
+            <label for="seat6-6" class="seat-label-left reserved"></label>
+
+            <input type="checkbox" id="seat6-5" class="seat" />
+            <label for="seat6-5" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat6-4" class="seat" />
+            <label for="seat6-4" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat6-3" class="seat" />
+            <label for="seat6-3" class="seat-label-left reserved"></label>
+
+            <input type="checkbox" id="seat6-2" class="seat" />
+            <label for="seat6-2" class="seat-label-left reserved"></label>
+
+            <input type="checkbox" id="seat6-1" class="seat" />
+            <label for="seat6-1" class="seat-label-left available"></label>
+          </div>
+
+          <!-- row 7 -->
+          <div class="row">
+            <input type="checkbox" id="seat7-12" class="seat" />
+            <label for="seat7-12" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat7-11" class="seat" />
+            <label for="seat7-11" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat7-10" class="seat" />
+            <label for="seat7-10" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat7-9" class="seat" />
+            <label for="seat7-9" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat7-8" class="seat" />
+            <label for="seat7-8" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat7-7" class="seat" />
+            <label for="seat7-7" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat7-6" class="seat" />
+            <label for="seat7-6" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat7-5" class="seat" />
+            <label for="seat7-5" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat7-4" class="seat" />
+            <label for="seat7-4" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat7-3" class="seat" />
+            <label for="seat7-3" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat7-2" class="seat" />
+            <label for="seat7-2" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat7-1" class="seat" />
+            <label for="seat7-1" class="seat-label-left available"></label>
+          </div>
+
+          <!-- row 8 -->
+          <div class="row">
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-5" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-5" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-5" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-5" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-5" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-5" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-5" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-5" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-5" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-5" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-5" class="seat-label-left available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-5" class="seat-label-left available"></label>
+          </div>
+        </div>
+
+        <!--RIGHT SEATING-->
+         <div class="seatingRight">
+          <div class="row">
+            <!-- row 1 -->
+            <input type="checkbox" id="seat1-12" class="seat" />
+            <label for="seat1-12" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-13" class="seat" />
+            <label for="seat1-13" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-14" class="seat" />
+            <label for="seat1-14" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-15" class="seat" />
+            <label for="seat1-15" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-16" class="seat" />
+            <label for="seat1-16" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-17" class="seat" />
+            <label for="seat1-17" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-18" class="seat" />
+            <label for="seat1-18" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-19" class="seat" />
+            <label for="seat1-19" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-20" class="seat" />
+            <label for="seat1-20" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-21" class="seat" />
+            <label for="seat1-21" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-22" class="seat" />
+            <label for="seat1-22" class="seat-label-right available"></label>
+          </div>
+
+          <!-- row 2 -->
+          <div class="row">
+            <input type="checkbox" id="seat1-1" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-2" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-3" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-4" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+          </div>
+
+          <!-- row 3 -->
+          <div class="row">
+            <input type="checkbox" id="seat1-1" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-2" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-3" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-4" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+          </div>
+
+          <!-- row 4 -->
+          <div class="row">
+            <input type="checkbox" id="seat1-1" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-2" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-3" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-4" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+          </div>
+
+          <!-- row 5 -->
+          <div class="row">
+            <input type="checkbox" id="seat1-1" class="seat" />
+            <label for="seat1-1" class="seat-label-right reserved"></label>
+
+            <input type="checkbox" id="seat1-2" class="seat" />
+            <label for="seat1-1" class="seat-label-right reserved"></label>
+
+            <input type="checkbox" id="seat1-3" class="seat" />
+            <label for="seat1-1" class="seat-label-right reserved"></label>
+
+            <input type="checkbox" id="seat1-4" class="seat" />
+            <label for="seat1-1" class="seat-label-right reserved"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right reserved"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right reserved"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right reserved"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right reserved"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right reserved"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right reserved"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right reserved"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right reserved"></label>
+          </div>
+
+          <!-- row 6 -->
+          <div class="row">
+            <input type="checkbox" id="seat1-1" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-2" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-3" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-4" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+          </div>
+
+          <!-- row 7 -->
+          <div class="row">
+            <input type="checkbox" id="seat1-1" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-2" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-3" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-4" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+          </div>
+
+          <!-- row 8 -->
+          <div class="row">
+            <input type="checkbox" id="seat1-1" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-2" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-3" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-4" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+
+            <input type="checkbox" id="seat1-5" class="seat" />
+            <label for="seat1-1" class="seat-label-right available"></label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+  
+</html>
