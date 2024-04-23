@@ -68,11 +68,16 @@ let seats = [];
 //Lägger till ett click event på alla checkboxar, och lägger till varje checkbox man klickar på i den tomma arrayen.
 for (let i = 0; i < checkbox.length; i++) {
   checkbox[i].addEventListener("click", () => {
-    seats.push(checkbox[i]);
+    seats.push(checkbox[i].id);
   });
 }
 
-//Loggar ut samtliga objekt i arrayen.
+function showSeats() {
+  var text = document.getElementById("displayBox");
+  text.style.display = "block";
+}
+
+//Loggar ut samtliga objekt i arrayen som text i HTML.
 function displaySeats() {
-  console.log(seats);
+  document.getElementById("display").innerHTML = seats;
 }
