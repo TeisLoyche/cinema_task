@@ -23,7 +23,6 @@
     <!--Form-->
     <div class="form_container">
     <div class="Form">
-        <form action="/action_page.php">
           <label for="fname"></label>
           <input type="text" id="fname" name="fullname" placeholder="Full name">
       
@@ -34,9 +33,12 @@
           <label for="phoneNumber"></label>
           <input type="tel" id="phone" name="phone" placeholder="Phone Number">
           
-          <input type="submit" value="BOOK NOW!">
+          <button type="submit">BOOK NOW!</button>
+
+          <div class="selectedSeats"><!--Empty div to display selected tickets--></div>
         </form>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
