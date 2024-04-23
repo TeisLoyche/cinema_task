@@ -72,12 +72,8 @@ for (let i = 0; i < checkbox.length; i++) {
   });
 }
 
-function showSeats() {
-  var text = document.getElementById("displayBox");
-  text.style.display = "block";
-}
-
-//Loggar ut samtliga objekt i arrayen som text i HTML.
+//Loggar ut samtliga objekt (säten) i arrayen som synlig text i HTML. Problemet är dock att det endast går att printa sätena på samma sida.
+//De försvinner när jag istället försöker visa dem i bookingFormen på nästa sida.
 function displaySeats() {
   document.getElementById("display").innerHTML = seats;
 }
