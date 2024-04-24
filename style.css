@@ -36,6 +36,10 @@
   padding-left: 20px;
 }
 
+.logo:hover {
+  cursor: pointer;
+}
+
 .now_playing {
   grid-area: playing;
   font-family: "Oswald", sans-serif;
@@ -95,6 +99,10 @@
   width: 150px;
   border: none;
   font-weight: 600;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .button_container {

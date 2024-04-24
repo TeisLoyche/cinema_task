@@ -6,7 +6,8 @@
     <title>Confirm</title>
     <link rel="stylesheet" href="formstyle.css" />
   </head>
-  <body>
+  <body onload="displaySeats()"> <!--Hämtar de valda sätena från förra sidan.-->
+    
       <!--Main container-->
       <div class="container">
 
@@ -16,7 +17,7 @@
       <div class="coming_soon">COMING SOON</div>
       <div class="about">ABOUT</div>
       <div class="item headerGrid">
-        <img class="logo" src="images/logo.png" />
+        <img class="logo" src="images/logo.png" onClick="window.location.href='index.html'" />
       </div>
     </div>
 
@@ -24,20 +25,20 @@
     <div class="form_container">
     <div class="Form">
           <label for="fname"></label>
-          <input type="text" id="fname" name="fullname" placeholder="Full name">
+          <input type="text" id="fname" name="fullname" placeholder="Full name" required>
       
           <label for="email"></label>
-          <input type="email" id="email" name="email" placeholder="Email">
+          <input type="email" id="email" name="email" placeholder="Email" required>
 
           
           <label for="phoneNumber"></label>
-          <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+          <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
           
-          <button type="submit">BOOK NOW!</button>
+          <button type="submit" onClick="confirmBooking()">BOOK NOW!</button>
 
           <!--Div med en tom paragraf i-->
-          <div class="selectedSeats">Your selected seats: 
-            <p id="display"></p> <!--Här vill jag att sätena skall visas-->
+          <div class="selectedSeats"><h3>Your selected seats: </h3>
+            <p id="display"></p> <!--Här skall de valda sätena visas-->
           </div>
 
         </form>

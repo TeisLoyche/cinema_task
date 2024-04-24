@@ -32,6 +32,11 @@
   padding-top: 22px;
   padding-left: 20px;
 }
+
+.logo:hover {
+  cursor: pointer;
+}
+
 .now_playing {
   grid-area: playing;
   font-family: "Oswald", sans-serif;
@@ -129,4 +134,21 @@ input[type="submit"]:hover {
   padding: 50px;
   height: 460px;
   width: 500px;
+}
+
+h3 {
+  font-weight: 800;
+  color: white;
+  font-size: 30px;
+  font-family: "Inter", sans-serif;
+}
+
+p {
+  color: white;
+  font-family: "Inter", sans-serif;
+  padding-top: 10px;
+}
+
+button:hover {
+  cursor: pointer;
 }
